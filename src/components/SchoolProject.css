@@ -1,0 +1,23 @@
+.bg-container {
+    background-image: url("https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95d5d0ed1.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.overlay-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 35%;
+}
+
+.overlay-text p {
+    font-size: 1.5rem;
+}

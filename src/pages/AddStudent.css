@@ -1,0 +1,5 @@
+.student-bg {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  /* OR use image */
+  /* background: url('/images/school-bg.jpg') center center/cover no-repeat; */
+}

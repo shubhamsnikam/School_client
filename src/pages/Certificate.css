@@ -1,0 +1,26 @@
+.certificate {
+  width: 600px;
+  padding: 40px;
+  border: 5px solid #333;
+  margin: 20px auto;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.certificate h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.certificate h3 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+}
+
+.certificate p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
