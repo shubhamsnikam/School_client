@@ -19,7 +19,7 @@ const CashMemo = () => {
 
   // 🆕 Fetch entries from backend on component mount
   useEffect(() => {
-    fetch('http://localhost:5000/api/cashbook') // 🔄 UPDATED
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/cashbook`) // 🔄 UPDATED
       .then(res => res.json())
       .then(data => setEntries(data))
       .catch(err => console.error('Error fetching entries:', err));
@@ -37,7 +37,7 @@ const CashMemo = () => {
       amount: parseFloat(form.amount),
     };
 
-    fetch('http://localhost:5000/api/cashbook', { // 🔄 UPDATED
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/cashbook`, { // 🔄 UPDATED
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newEntry),
