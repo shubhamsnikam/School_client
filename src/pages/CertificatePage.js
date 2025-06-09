@@ -27,7 +27,7 @@ const CertificatePage = () => {
 
   const fetchCertificates = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/certificates');
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/certificates`);
       setCertificates(res.data);
     } catch (err) {
       console.error('Error fetching certificates:', err);
@@ -36,7 +36,7 @@ const CertificatePage = () => {
 
   const fetchStudents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/students');
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/students`);
       setStudents(res.data);
       if (res.data.length > 0) {
         setFormData((prev) => ({ ...prev, studentId: res.data[0]._id }));
@@ -51,7 +51,7 @@ const CertificatePage = () => {
     try {
       const issueDate = new Date().toISOString();
 
-      await axios.post('http://localhost:5000/api/certificates', {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/certificates`, {
         ...formData,
         issueDate,
       });
