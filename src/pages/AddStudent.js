@@ -18,7 +18,7 @@ const AddStudent = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/students', student, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/students`, student, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('✅ Student added successfully!');
