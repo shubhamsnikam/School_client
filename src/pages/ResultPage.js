@@ -68,7 +68,7 @@ const ResultMarksheet = () => {
   const saveToBackend = () => {
     const payload = { ...student, subjects };
 
-    fetch('http://localhost:5000/api/results', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/results`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
