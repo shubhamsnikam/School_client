@@ -102,14 +102,7 @@ const ResultMarksheet = () => {
 
       <div className="card p-3 mb-4">
         <h5>Student Details</h5>
-        <input
-          type="text"
-          name="schoolName"
-          placeholder="School Name"
-          className="form-control mb-2"
-          value={student.schoolName}
-          onChange={handleStudentChange}
-        />
+      
         <input
           type="text"
           name="name"
@@ -197,7 +190,7 @@ const ResultMarksheet = () => {
           boxSizing: 'border-box',
         }}
       >
-        <h2 className="text-center">{student.schoolName || 'School Name'}</h2>
+        <h2 className="text-center">{student.schoolName}</h2>
         <h4 className="text-center mb-4">Result Marksheet</h4>
 
         <p><strong>Name:</strong> {student.name}</p>
