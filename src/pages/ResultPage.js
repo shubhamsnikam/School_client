@@ -14,7 +14,7 @@ const ResultMarksheet = () => {
     name: '',
     className: '',
     rollNo: '',
-    schoolName: 'Sangli ZP English School',
+    schoolName: 'Sangli ZP  School',
   });
 
   const [subjects, setSubjects] = useState(defaultSubjects);
