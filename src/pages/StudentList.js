@@ -13,7 +13,7 @@ const StudentList = () => {
   const fetchStudents = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/students`, {
+      const res = await axios.get('http://localhost:5000/api/students', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStudents(res.data);
@@ -41,7 +41,7 @@ const StudentList = () => {
     if (!window.confirm('Are you sure you want to delete this student?')) return;
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/students/${id}`, {
+      await axios.delete(`http://localhost:5000/api/students/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Student deleted successfully');
@@ -74,7 +74,7 @@ const StudentList = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/students/${editingStudent._id}`, editingStudent, {
+      await axios.put(`http://localhost:5000/api/students/${editingStudent._id}`, editingStudent, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Student updated successfully');
